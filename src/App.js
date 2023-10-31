@@ -1,27 +1,20 @@
 function App() {
-  const number = Math.ceil(Math.random() * 100);
-  const isLarge = number > 50;
-  const isSmall = number <= 50;
-
   return (
+    // since jsx is converted to js, cannot use jsx keywords
     <>
-      <h1>Random Number : {number}</h1>
-      <h1>{number > 50 ? "Big" : "Small"} Number</h1>
-      <div style={{ color: "red" }}>
-        {number > 50 ? <BigImg /> : <SmallImg />}
+      <div className="header">Cannot write div class=""</div>
+      <div className="error">Use className instead</div>
+      <div>
+        <label htmlFor="nameInput">Name</label>
+        {/*for property is used as htmlFor*/}
+        <input type="text" id="nameInput" />
       </div>
-      <div>{isLarge && <h2>Its a Big Number</h2>}</div>
-      <div>{isLarge || <h2>Its a Small Number</h2>}</div>
+      <div>
+        <label htmlFor="nameInput">Age</label>
+        <input type="text" id="ageInput" />
+      </div>
     </>
   );
-}
-
-function BigImg() {
-  return <h1>Big Image</h1>;
-}
-
-function SmallImg() {
-  return <h1>Small Image</h1>;
 }
 
 export default App;
