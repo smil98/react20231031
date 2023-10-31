@@ -1,13 +1,18 @@
 function App() {
-  const name = "heungmin";
+  const num1 = Math.ceil(Math.random() * 6);
+  const num2 = Math.ceil(Math.random() * 6);
+  let message = "Retry...";
+  let messageClassName = "lose";
+
+  if (num1 == num2) {
+    messageClassName = "win";
+    message = "Congrats!";
+  }
   return (
     <>
-      <h1>name: {name}</h1>
-      <h1>name: {"kangin"}</h1>
-      <h1>name: heechan</h1>
-
-      <div className={"error"}>Lorem ipsum dolor.</div>
-      <div className="error">Lorem ipsum dolor.</div>
+      <h1>First Dice: {num1}</h1>
+      <h1>Second Dice: {num2}</h1>
+      <h2 className={messageClassName}>{message}</h2>
     </>
   );
 }
