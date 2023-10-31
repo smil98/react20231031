@@ -3,23 +3,22 @@ function App() {
   //if empty content must end right at the start ex. <br />
   return (
     <div>
-      <h1>My First React</h1>
-      <MyComp />
+      <MyComponent1 />
+      <MyComponent1 />
+      <MyComponent1 />
     </div>
   );
 }
 
-//syntax: components should always start with Uppercase
-//must have return statement, mostly jsx code
-function MyComp() {
-  //always should have one root tag
+function MyComponent1() {
   return (
-    <>
-      <h2>Component Example</h2>
-      <h3>Must have one root tag</h3>
-      {/*this is how th add comments*/}
-    </>
+    <div style={{ width: "100%" }}>
+      <img
+        style={{ width: "100%" }}
+        src="https://i.imgur.com/SuL4x4v.jpeg"
+        alt="geoungbokgung"
+      />
+    </div>
   );
 }
-
 export default App;
