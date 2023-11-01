@@ -1,19 +1,23 @@
 function App() {
   return (
     <>
-      <MyComp value="heungmin" address="sincheon" />
-      <MyComp value="kangin" address="hongdae" />
+      <MyComp name="heungmin" address="sincheon" city="seoul" age={33} />
+      <MyComp address="gangnam" city="busan" age={22} />
+      <MyComp address="london" city="london" />
+      <MyComp name="heechan" address="gangnam" city="paris" age={66} />
     </>
   );
 }
 
-function MyComp({ value, address }) {
+function MyComp({ name = "Anon", address, city, age = 100 }) {
   // let {value, address} = props;
   return (
     <div>
-      <h1>
-        {value} lives in {address}
-      </h1>
+      <h1>{name}</h1>
+      <p>
+        lives in {address}, currently working in {city} and is currently{" "}
+        {age + " "} years old.
+      </p>
     </div>
   );
 }
