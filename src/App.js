@@ -1,27 +1,19 @@
 function App() {
   return (
     <>
-      <h1
-        className="note"
-        style={{ backgroundColor: "blue", color: "white" }}
-        title="title property"
-      >
-        Lorem.
-      </h1>
-      <p title="content property">Lorem ipsum dolor.</p>
-      <MyComp title="my property" name="heungmin" />
+      <MyComp value="heungmin" address="sincheon" />
+      <MyComp value="kangin" address="hongdae" />
     </>
   );
 }
 
-//properties returned by function delivered as factor
-//ex. title ="my property" -> {title:"my property"}
-//property shortened as props
-function MyComp(props) {
-  console.log("property that MyComp has fetched", props);
+function MyComp({ value, address }) {
+  // let {value, address} = props;
   return (
     <div>
-      <h1 title={props.title}>hello {props.name}</h1>
+      <h1>
+        {value} lives in {address}
+      </h1>
     </div>
   );
 }
