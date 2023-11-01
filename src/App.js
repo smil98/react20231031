@@ -1,21 +1,16 @@
-import {
-  MyBox,
-  MyElem,
-  MyContainer,
-  name,
-  address,
-  person,
-} from "./component/MyBox"; //can bring multiple components like this
+import aaggee, { city } from "./component/MyElem";
+import MyContainer from "./component/MyBox"; //no need to surround with {}
 
 function App() {
-  console.log("name", name);
-  console.log("address", address);
-  console.log("person", person);
   return (
     <>
-      <MyBox />
-      <MyElem />
+      <h1>{city}</h1>
+      <h1>{aaggee}</h1>
       <MyContainer />
+      <h1>
+        {person.age}, {person.name}
+      </h1>
+      <h1>{country}</h1>
     </>
   );
 }
