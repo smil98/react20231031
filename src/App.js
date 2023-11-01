@@ -1,24 +1,25 @@
-
 function App() {
   return (
     <div>
-        <h1>My First React</h1>
-        <MyComp />
+      <MyText
+        style={{
+          color: "orange",
+          backgroundColor: "black",
+          fontSize: "3rem",
+          fontWeight: "bold",
+        }}
+        value="Practice with Properties"
+      />
     </div>
   );
 }
 
-//syntax: components should always start with Uppercase
-//must have return statement, mostly jsx code
-function MyComp() {
-    //always should have one root tag
-    return (
-        <>
-            <h2>Component Example</h2>
-            <h3>Must have one root tag</h3>
-            {/*this is how th add comments*/}
-        </>
-    )
+function MyText(props) {
+  return (
+    <div style={props.style}>
+      <p>{props.value}</p>
+    </div>
+  );
 }
 
 export default App;
