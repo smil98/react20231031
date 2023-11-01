@@ -1,9 +1,9 @@
+import "../css/style1.css";
+
 export default function MyBox() {
   return (
     <div>
-      <h1>This is my Box</h1>
+      <h1 className="boxClass">Lorem ipsum dolor sit amet.</h1>
     </div>
   );
 }
-
-export const address = "sincheon";
