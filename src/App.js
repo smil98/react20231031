@@ -4,13 +4,13 @@
 //chakraui css library
 import MyBox from "./component/MyBox";
 import MyContainer from "./component/MyContainer";
+import { MyComp } from "./component/MyComp";
 
 function App() {
   return (
     <>
       <MyBox />
-      <MyBox />
-      <MyContainer />
+      <MyComp />
       <MyContainer />
     </>
   );
