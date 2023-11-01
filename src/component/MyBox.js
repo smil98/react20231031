@@ -1,15 +1,16 @@
-export function MyBox() {
+function MyBox() {
+  return (
+    <div>
+      <h1>THIS IS MYBOX</h1>
+    </div>
+  );
+}
+
+function MyContainer() {
   return null;
 }
 
-export function MyElem() {
-  return null;
-}
+export const country = "france";
+export const person = { name: "son", country: "italy" };
 
-export function MyContainer() {
-  return null;
-}
-
-export let name = "heungmin son";
-export const address = "sincheon";
-export const person = { name: "kangin", team: "paris" };
+export default MyBox;
