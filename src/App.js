@@ -1,24 +1,23 @@
-
 function App() {
   return (
     <div>
-        <h1>My First React</h1>
-        <MyComp />
+      <h1 style={{ textAlign: "center" }}>Soccer Players</h1>
+      <MyElem name="heungMin" age={44} team="totnum" />
+      <MyElem name="kangin" age={33} team="paris" />
     </div>
   );
 }
 
-//syntax: components should always start with Uppercase
-//must have return statement, mostly jsx code
-function MyComp() {
-    //always should have one root tag
-    return (
-        <>
-            <h2>Component Example</h2>
-            <h3>Must have one root tag</h3>
-            {/*this is how th add comments*/}
-        </>
-    )
+function MyElem({ name, age, team }) {
+  return (
+    <div>
+      <ul>
+        <h1>{name}</h1>
+        <li>age: {age}</li>
+        <li>team : {team}</li>
+      </ul>
+    </div>
+  );
 }
 
 export default App;
