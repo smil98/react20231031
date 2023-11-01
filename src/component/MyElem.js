@@ -1,16 +1,9 @@
-//named export
-export function MyElem() {
+export default function MyElem() {
   return (
     <div>
-      <h1>MY ELEMENT</h1>
+      <h1>This is my Elem</h1>
     </div>
   );
 }
 
-export const city = "seoul";
-const age = 33;
-
-//default export
-//no name set
-//one file single default export only
-export default age;
+const address = "incheon";

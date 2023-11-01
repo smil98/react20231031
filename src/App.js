@@ -1,16 +1,15 @@
-import aaggee, { city } from "./component/MyElem";
-import MyContainer from "./component/MyBox"; //no need to surround with {}
+import MyBox, { address } from "./component/MyBox";
+import MyElem, { address as myAddress } from "./component/MyElem";
 
 function App() {
   return (
     <>
-      <h1>{city}</h1>
-      <h1>{aaggee}</h1>
-      <MyContainer />
-      <h1>
-        {person.age}, {person.name}
-      </h1>
-      <h1>{country}</h1>
+      <h1>{address}</h1>
+      {/*if both imports have same name, if you don't clarify which one it is will result error
+      thus give alias by "as aliasName" when importing */}
+      <h1>{myAddress}</h1>
+      <MyElem />
+      <MyBox />
     </>
   );
 }
