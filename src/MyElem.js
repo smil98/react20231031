@@ -1,15 +1,18 @@
-export function MyElem() {
+function MyElem() {
   return null;
 }
 
-export function MyContent() {
+function MyContent() {
   return null;
 }
 
-export function MyNavBar() {
+function MyNavBar() {
   return null;
 }
 
-export let country = "Korea";
-export const text = "Now";
-export const value = 33;
+const country = "Korea";
+const text = "Now";
+const value = 33;
+
+export { country, text, value };
+export { MyElem, MyNavBar, MyContent };
