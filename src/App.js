@@ -8,373 +8,407 @@ import {
   SimpleGrid,
   Heading,
   Button,
+  ButtonGroup,
 } from "@chakra-ui/react";
+import { AddIcon } from "@chakra-ui/icons";
 
 function App() {
   return (
     <>
+      {/*Card*30>CardHeader>Heading[size="md"]>lorem2^^CardBody>lorem15^CardFooter[justify="space-between"][flexWrap="wrap"][gap={2}]>Button[flex={1}]*2>lorem1*/}
       <SimpleGrid gap={3} columns={{ base: 1, md: 3, xl: 6 }}>
         <Card>
           <CardHeader>
             <Heading size="md">Lorem ipsum.</Heading>
           </CardHeader>
           <CardBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse est
-            et inventore qui veniam voluptate?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+            accusantium fugiat laboriosam magnam, numquam saepe?
           </CardBody>
-          <CardFooter>
-            <Button>Lorem.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>
+              <AddIcon border={"1px solid black"} borderRadius={10} p={"1px"} />
+              Lorem.
+            </Button>
+            <Button flex={1}>Veritatis.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Consequatur, tempore?</Heading>
+            <Heading size="md">Sit, totam.</Heading>
           </CardHeader>
           <CardBody>
-            Ab corporis cupiditate dolorem doloribus eius expedita ipsa magni
-            maxime nulla odit, quae quisquam voluptate.
+            Eveniet, obcaecati, repellat. Ab dolorem magnam quia veniam vero!
+            Inventore mollitia neque quidem quod vitae.
           </CardBody>
-          <CardFooter>
-            <Button>Inventore.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Assumenda!</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Esse, natus.</Heading>
+            <Heading size="md">Debitis, veniam!</Heading>
           </CardHeader>
           <CardBody>
-            Consectetur eveniet laborum laudantium mollitia ullam, ut voluptate
-            voluptatem? At cumque eum ipsam molestiae sint.
+            Alias aliquam aspernatur beatae consequatur explicabo ipsam iusto
+            nobis quam qui quidem, quod sint voluptas.
           </CardBody>
-          <CardFooter>
-            <Button>Maiores.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Accusamus.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Maxime, vel.</Heading>
+            <Heading size="md">Enim, sunt.</Heading>
           </CardHeader>
           <CardBody>
-            A, debitis dolorum eaque eum, impedit inventore nobis nulla placeat
-            possimus quisquam reiciendis similique vitae.
+            Culpa deleniti, eos porro quibusdam quisquam velit. Dolorum earum
+            mollitia natus porro quod tempore vitae.
           </CardBody>
-          <CardFooter>
-            <Button>Eaque.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Qui.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Recusandae, voluptate.</Heading>
+            <Heading size="md">Qui, repellendus.</Heading>
           </CardHeader>
           <CardBody>
-            Ad, aspernatur eligendi, excepturi illum ipsa laboriosam maiores
-            molestiae mollitia pariatur qui recusandae repellat, vitae.
+            Alias aspernatur culpa incidunt ipsam itaque magni minus nesciunt,
+            officiis perspiciatis, quae quaerat rem repellendus.
           </CardBody>
-          <CardFooter>
-            <Button>Blanditiis.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Cumque.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Similique, suscipit!</Heading>
+            <Heading size="md">Quidem, quod.</Heading>
           </CardHeader>
           <CardBody>
-            Assumenda dolores ducimus eum labore nisi quae similique, tempore
-            voluptatem. Id, illo, nihil. Animi, dignissimos!
+            Accusantium aspernatur dolores laborum nesciunt provident quisquam
+            recusandae repellat. Ad dolorem mollitia non quia sequi.
           </CardBody>
-          <CardFooter>
-            <Button>Eveniet?</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Aperiam!</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Et, ipsam!</Heading>
+            <Heading size="md">Minus, voluptate!</Heading>
           </CardHeader>
           <CardBody>
-            Accusamus amet debitis dignissimos dolor dolorem, eveniet
-            exercitationem fugiat magnam, maiores nisi officiis sed similique?
+            Culpa debitis, dignissimos doloremque dolores doloribus et explicabo
+            iure maxime molestiae quasi quia similique. Molestiae.
           </CardBody>
-          <CardFooter>
-            <Button>Autem.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Commodi?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Accusamus, dolore?</Heading>
+            <Heading size="md">Officiis, quod!</Heading>
           </CardHeader>
           <CardBody>
-            Dignissimos distinctio eligendi esse est eveniet, expedita fugit
-            impedit non quidem quos sequi velit voluptatum.
+            Atque dolor doloribus facere libero quis repellendus similique
+            temporibus? Ad, aliquid, illo. Doloribus odit, sunt.
           </CardBody>
-          <CardFooter>
-            <Button>Non.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Sed!</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Dicta, porro!</Heading>
+            <Heading size="md">Facilis, laborum?</Heading>
           </CardHeader>
           <CardBody>
-            Ex, exercitationem fugit ipsam magni modi nostrum odit officiis
-            perspiciatis similique voluptas. Animi, tempora, voluptas?
+            Architecto aspernatur doloremque et eveniet, molestiae nobis quae
+            recusandae repudiandae tempore tenetur voluptatem voluptatibus,
+            voluptatum?
           </CardBody>
-          <CardFooter>
-            <Button>Eaque.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Optio?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Ex, repudiandae!</Heading>
+            <Heading size="md">Amet, expedita.</Heading>
           </CardHeader>
           <CardBody>
-            Facilis iure minima officia quos repudiandae! Asperiores distinctio
-            illum inventore, molestias obcaecati repudiandae ullam vel.
+            Asperiores assumenda corporis dolor dolorem dolorum eligendi, ipsa
+            laudantium maxime, omnis porro, quibusdam repellendus vitae.
           </CardBody>
-          <CardFooter>
-            <Button>Voluptatem.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Mollitia.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Commodi, nihil?</Heading>
+            <Heading size="md">Ipsam, sequi.</Heading>
           </CardHeader>
           <CardBody>
-            Eligendi fugit obcaecati perspiciatis quas quasi tempore voluptatem!
-            Cum nemo non obcaecati omnis ut, voluptas.
+            Ab amet cumque, enim laudantium maxime perspiciatis praesentium quod
+            repellat repudiandae sed velit vero voluptatibus?
           </CardBody>
-          <CardFooter>
-            <Button>Nemo!</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Quod.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">A, praesentium?</Heading>
+            <Heading size="md">Aspernatur, iste?</Heading>
           </CardHeader>
           <CardBody>
-            At earum laboriosam neque optio possimus quibusdam temporibus ut
-            vel? Aut cum est nostrum reiciendis.
+            Atque distinctio doloribus ex facere, molestias numquam officia
+            pariatur quo quos repudiandae saepe sed similique!
           </CardBody>
-          <CardFooter>
-            <Button>Veniam.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Ex?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Consequatur, consequuntur.</Heading>
+            <Heading size="md">Sunt, voluptas?</Heading>
           </CardHeader>
           <CardBody>
-            Aperiam blanditiis doloremque facere harum hic id ipsum, laborum
-            quaerat ratione totam vel vero voluptas.
+            Consectetur explicabo libero minima ut? Expedita iste minus
+            necessitatibus officiis placeat quia rem repudiandae, tempore!
           </CardBody>
-          <CardFooter>
-            <Button>Aliquid.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Sed.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Eos, quis.</Heading>
+            <Heading size="md">Corporis, tempore.</Heading>
           </CardHeader>
           <CardBody>
-            Ab architecto at commodi ipsa, libero magni neque nobis perferendis
-            quam quo sunt veritatis, voluptatum?
+            Enim esse magni nam quis quo recusandae rem vel vitae? A commodi
+            maiores possimus voluptate?
           </CardBody>
-          <CardFooter>
-            <Button>Assumenda!</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Quis?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Consectetur, soluta.</Heading>
+            <Heading size="md">Omnis, qui.</Heading>
           </CardHeader>
           <CardBody>
-            Aliquid animi eius fugiat sapiente vel! Beatae eos minima natus
-            omnis quae reiciendis tempora ut.
+            Amet atque distinctio et exercitationem, hic ipsum nobis provident
+            quia! Aspernatur commodi delectus nesciunt tenetur!
           </CardBody>
-          <CardFooter>
-            <Button>Consequuntur.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Doloribus.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Debitis, omnis!</Heading>
+            <Heading size="md">Dolores, suscipit.</Heading>
           </CardHeader>
           <CardBody>
-            Quod, suscipit veniam? Accusantium amet aut debitis explicabo nemo
-            odio, officiis repudiandae sed sunt suscipit?
+            Adipisci dignissimos iste odio. Amet aperiam aspernatur dolor,
+            expedita iure maxime neque nobis unde. Doloremque.
           </CardBody>
-          <CardFooter>
-            <Button>Et?</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Velit!</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Cumque, illo!</Heading>
+            <Heading size="md">Placeat, repellendus.</Heading>
           </CardHeader>
           <CardBody>
-            Blanditiis fugiat iure, laboriosam magnam nam necessitatibus nihil
-            odit perspiciatis porro recusandae rerum, saepe sed?
+            Assumenda blanditiis consectetur eaque facere fugit, labore minima
+            nemo provident qui quod repellendus rerum unde!
           </CardBody>
-          <CardFooter>
-            <Button>Nemo.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Expedita?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Cum, quos!</Heading>
+            <Heading size="md">Nulla, officiis!</Heading>
           </CardHeader>
           <CardBody>
-            Cupiditate delectus distinctio dolor, explicabo iste maiores
-            molestias perspiciatis quibusdam repellat repudiandae, sunt
-            voluptates voluptatibus!
+            A ad, amet, at est eum ex explicabo facilis harum hic nisi quae sed
+            ullam?
           </CardBody>
-          <CardFooter>
-            <Button>Doloremque?</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Assumenda.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Id, ut!</Heading>
+            <Heading size="md">Error, sed?</Heading>
           </CardHeader>
           <CardBody>
-            Animi consequuntur eveniet facere magni tempora? Cumque hic maiores
-            modi quas, quasi recusandae sapiente voluptatibus.
+            Commodi eos unde veritatis! Cupiditate dolorem maiores numquam
+            recusandae sequi. Adipisci at autem quidem voluptatibus.
           </CardBody>
-          <CardFooter>
-            <Button>Neque.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Provident?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Similique, vero.</Heading>
+            <Heading size="md">Fugit, iste?</Heading>
           </CardHeader>
           <CardBody>
-            Aperiam aut consequuntur culpa eaque ex incidunt iusto molestiae
-            numquam quas quia quisquam, repellat voluptatem!
+            Adipisci asperiores cum delectus dolores iusto labore officia optio
+            perferendis quas, quo sequi sit soluta!
           </CardBody>
-          <CardFooter>
-            <Button>Enim.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Cupiditate!</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Consectetur, recusandae.</Heading>
+            <Heading size="md">Eius, rerum.</Heading>
           </CardHeader>
           <CardBody>
-            Accusamus, adipisci aperiam beatae consectetur, eaque fugiat
-            necessitatibus nesciunt, officiis sapiente tempora unde vero
-            voluptates.
+            Asperiores aut consectetur cum eius harum in, ipsa libero magni,
+            modi perferendis quam, sunt veritatis!
           </CardBody>
-          <CardFooter>
-            <Button>Facilis.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Excepturi.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Aspernatur, voluptatum!</Heading>
+            <Heading size="md">Non, ut?</Heading>
           </CardHeader>
           <CardBody>
-            Iusto numquam, veniam! Deleniti ex illum iure neque quibusdam
-            tempora tenetur voluptate! Beatae cupiditate, maiores.
+            Expedita, ipsam, voluptatibus. Corporis eum fugiat itaque.
+            Consequuntur distinctio dolores ex natus praesentium tempora velit?
           </CardBody>
-          <CardFooter>
-            <Button>Nulla.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Incidunt.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Autem, tenetur!</Heading>
+            <Heading size="md">Asperiores, eveniet?</Heading>
           </CardHeader>
           <CardBody>
-            Alias amet deleniti, eius fuga, mollitia necessitatibus neque
-            praesentium quia quisquam tempora unde velit? Sed.
+            A autem dolorem earum exercitationem ipsa laudantium magnam modi,
+            quae quidem quo reiciendis vel. Vel.
           </CardBody>
-          <CardFooter>
-            <Button>Adipisci.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Ex.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Consequuntur, distinctio?</Heading>
+            <Heading size="md">Accusantium, asperiores?</Heading>
           </CardHeader>
           <CardBody>
-            Aspernatur dignissimos eaque eligendi est expedita fugit iste iure
-            magnam nesciunt, omnis placeat rerum veritatis?
+            A, accusamus aliquam earum, eos est, facere maiores molestias nam
+            nostrum obcaecati quas totam! Aliquam.
           </CardBody>
-          <CardFooter>
-            <Button>Vitae?</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Qui.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Architecto, delectus.</Heading>
+            <Heading size="md">A, pariatur?</Heading>
           </CardHeader>
           <CardBody>
-            Alias aliquid consequatur cupiditate distinctio doloremque in
-            inventore minus, nam praesentium provident quisquam reprehenderit
-            sint!
+            Accusamus autem deserunt doloremque dolores enim excepturi expedita
+            id nulla perferendis, quam? Accusantium, at, ex!
           </CardBody>
-          <CardFooter>
-            <Button>Laborum.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Esse.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Minus, porro.</Heading>
+            <Heading size="md">Dolor, iusto.</Heading>
           </CardHeader>
           <CardBody>
-            A amet culpa dolorum, ea explicabo fugiat, in maxime modi mollitia
-            necessitatibus pariatur sed tempore.
+            Accusantium animi ducimus eius expedita facere inventore laborum
+            magnam nemo, obcaecati optio quis sequi totam?
           </CardBody>
-          <CardFooter>
-            <Button>Aliquid!</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Ratione.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Accusantium, eligendi?</Heading>
+            <Heading size="md">Fuga, recusandae!</Heading>
           </CardHeader>
           <CardBody>
-            Architecto, consectetur ducimus eius enim excepturi illum impedit
-            labore minima, neque quos ratione sit veniam.
+            A, architecto, consectetur deleniti doloremque et explicabo harum in
+            laborum nam odit officia, quae quas!
           </CardBody>
-          <CardFooter>
-            <Button>Consequatur?</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Hic!</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Deserunt, rerum?</Heading>
+            <Heading size="md">Facere, perferendis.</Heading>
           </CardHeader>
           <CardBody>
-            Ab animi, earum enim fuga magni mollitia non, omnis quisquam
-            repellat saepe soluta vel velit?
+            Debitis ea expedita impedit minus nulla, omnis quod reprehenderit
+            repudiandae, saepe tempore unde, velit vero!
           </CardBody>
-          <CardFooter>
-            <Button>Voluptas.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Adipisci?</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Assumenda, vel.</Heading>
+            <Heading size="md">Quae, voluptate.</Heading>
           </CardHeader>
           <CardBody>
-            Ex hic illo iure laborum magnam. Asperiores et explicabo maxime
-            praesentium quam repellat ut, velit.
+            Ad aperiam consequatur doloremque eius enim eos eveniet, nobis
+            quaerat quasi reiciendis reprehenderit repudiandae, rerum!
           </CardBody>
-          <CardFooter>
-            <Button>Eveniet.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Omnis.</Button>
           </CardFooter>
         </Card>
         <Card>
           <CardHeader>
-            <Heading size="md">Labore, nobis!</Heading>
+            <Heading size="md">Nam, nulla!</Heading>
           </CardHeader>
           <CardBody>
-            Animi architecto ducimus eos, expedita facilis fuga iusto laboriosam
-            quibusdam quis quod, reiciendis tempore voluptatibus?
+            Accusamus adipisci cumque dicta dignissimos dolores molestiae nulla
+            pariatur provident quos reprehenderit sed, totam unde?
           </CardBody>
-          <CardFooter>
-            <Button>Maxime.</Button>
+          <CardFooter justify="space-between" flexWrap="wrap" gap={2}>
+            <Button flex={1}>Lorem.</Button>
+            <Button flex={1}>Voluptates.</Button>
           </CardFooter>
         </Card>
       </SimpleGrid>
