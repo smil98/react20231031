@@ -26,135 +26,135 @@ function App() {
     <>
       <SimpleGrid gap={5} columns={1}>
         <Box>
-          <Table>
+          <Table variant="striped" colorScheme="blue" size="lg">
             <Thead>
               <Tr>
                 <Th>Lorem.</Th>
-                <Th>Illum!</Th>
-                <Th>Commodi.</Th>
-                <Th>Inventore.</Th>
+                <Th>Soluta.</Th>
+                <Th>Debitis?</Th>
+                <Th>Aliquam?</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
                 <Td>Lorem.</Td>
-                <Td>Natus?</Td>
-                <Td>Porro!</Td>
-                <Td>Expedita?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Itaque?</Td>
-                <Td>Dignissimos?</Td>
-                <Td>Commodi?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
+                <Td>Exercitationem.</Td>
                 <Td>Odio?</Td>
-                <Td>Possimus!</Td>
-                <Td>Esse.</Td>
+                <Td>Quaerat.</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
-                <Td>Quae.</Td>
-                <Td>Error.</Td>
-                <Td>Accusamus?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Cum.</Td>
-                <Td>Dolores?</Td>
-                <Td>Magnam.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Voluptatem!</Td>
-                <Td>Eum!</Td>
-                <Td>Impedit?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Laboriosam.</Td>
-                <Td>Quidem!</Td>
-                <Td>Error.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Veritatis?</Td>
-                <Td>Cum?</Td>
-                <Td>Tempore!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Quo?</Td>
-                <Td>Alias!</Td>
-                <Td>Explicabo.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Aliquam.</Td>
-                <Td>Alias.</Td>
-                <Td>Quidem?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Earum.</Td>
-                <Td>Adipisci!</Td>
-                <Td>Eius.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Quis.</Td>
-                <Td>Dolor.</Td>
-                <Td>Accusantium.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Eos.</Td>
-                <Td>Assumenda.</Td>
-                <Td>Est?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Odio.</Td>
-                <Td>Consequuntur?</Td>
-                <Td>In.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Tempore.</Td>
-                <Td>Ea.</Td>
-                <Td>Praesentium!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Ipsam.</Td>
-                <Td>Dicta?</Td>
-                <Td>Aperiam!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Nostrum.</Td>
+                <Td>Dolorum.</Td>
                 <Td>Labore?</Td>
+                <Td>Aliquid!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Eum.</Td>
+                <Td>Suscipit?</Td>
                 <Td>Et!</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
-                <Td>Officia!</Td>
-                <Td>Dicta?</Td>
-                <Td>Cum.</Td>
+                <Td>Autem.</Td>
+                <Td>Libero.</Td>
+                <Td>Deleniti.</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
-                <Td>Totam?</Td>
-                <Td>Aliquam?</Td>
-                <Td>Atque!</Td>
+                <Td>Sint.</Td>
+                <Td>Sit.</Td>
+                <Td>Voluptas.</Td>
               </Tr>
               <Tr>
                 <Td>Lorem.</Td>
-                <Td>Neque.</Td>
-                <Td>Culpa?</Td>
-                <Td>Dignissimos?</Td>
+                <Td>Dicta!</Td>
+                <Td>Excepturi!</Td>
+                <Td>Dolores.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Qui!</Td>
+                <Td>Temporibus.</Td>
+                <Td>Sunt.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Voluptatem.</Td>
+                <Td>Eum.</Td>
+                <Td>Voluptas.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Ut?</Td>
+                <Td>Reprehenderit!</Td>
+                <Td>Iure.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Vel?</Td>
+                <Td>Facere.</Td>
+                <Td>Illo.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Voluptatem?</Td>
+                <Td>Nihil.</Td>
+                <Td>Rerum!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Consectetur?</Td>
+                <Td>Eaque?</Td>
+                <Td>Dolorum?</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Expedita?</Td>
+                <Td>Illum.</Td>
+                <Td>Modi.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Quas.</Td>
+                <Td>Veritatis?</Td>
+                <Td>Iusto.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Nulla!</Td>
+                <Td>Inventore.</Td>
+                <Td>Earum.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Doloribus!</Td>
+                <Td>Ratione?</Td>
+                <Td>Tempore.</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Animi.</Td>
+                <Td>Soluta?</Td>
+                <Td>Quasi!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Possimus.</Td>
+                <Td>Architecto.</Td>
+                <Td>Porro!</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Blanditiis.</Td>
+                <Td>Quis?</Td>
+                <Td>Magnam?</Td>
+              </Tr>
+              <Tr>
+                <Td>Lorem.</Td>
+                <Td>Repudiandae!</Td>
+                <Td>Architecto.</Td>
+                <Td>Sapiente.</Td>
               </Tr>
             </Tbody>
           </Table>
