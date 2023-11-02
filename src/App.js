@@ -1,43 +1,47 @@
-import {
-  Button,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Button, useToast } from "@chakra-ui/react";
 
 function App() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const toast = useToast();
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-        isCentered
-        motionPreset="slideInBottom"
+      <Button
+        onClick={() =>
+          toast({
+            title: "Note",
+            description: "By pressing the buttons, you will create an account",
+            duration: 9000,
+            isClosable: true,
+          })
+        }
       >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Notice</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
-            blanditiis cupiditate ea esse, eveniet facilis, fugit illo iste
-            labore laboriosam laborum molestiae perferendis qui repudiandae
-            sequi, suscipit tenetur ullam voluptates!
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+        What is This?
+      </Button>
+      <Button
+        onClick={() =>
+          toast({
+            title: "Account Created",
+            description: "Account has been sucessfully created",
+            status: "success",
+            duration: 9000,
+            isClosable: true,
+          })
+        }
+      >
+        Create Account(sucess)
+      </Button>
+      <Button
+        onClick={() =>
+          toast({
+            title: "Account Created",
+            description: "Failed to Create an Account",
+            status: "error",
+            duration: 9000,
+            isClosable: true,
+          })
+        }
+      >
+        Create Account(fail)
+      </Button>
     </>
   );
 }
