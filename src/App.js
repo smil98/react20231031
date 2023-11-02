@@ -1,165 +1,19 @@
-import {
-  Box,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Flex,
-  SimpleGrid,
-  Heading,
-  Button,
-  ButtonGroup,
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  TableContainer,
-} from "@chakra-ui/react";
+import { Box, Center, Circle, Square } from "@chakra-ui/react";
 import { AddIcon } from "@chakra-ui/icons";
 
 function App() {
   return (
     <>
-      <SimpleGrid gap={5} columns={1}>
-        <Box>
-          <Table variant="striped" colorScheme="blue" size="lg">
-            <Thead>
-              <Tr>
-                <Th>Lorem.</Th>
-                <Th>Soluta.</Th>
-                <Th>Debitis?</Th>
-                <Th>Aliquam?</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Exercitationem.</Td>
-                <Td>Odio?</Td>
-                <Td>Quaerat.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Dolorum.</Td>
-                <Td>Labore?</Td>
-                <Td>Aliquid!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Eum.</Td>
-                <Td>Suscipit?</Td>
-                <Td>Et!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Autem.</Td>
-                <Td>Libero.</Td>
-                <Td>Deleniti.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Sint.</Td>
-                <Td>Sit.</Td>
-                <Td>Voluptas.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Dicta!</Td>
-                <Td>Excepturi!</Td>
-                <Td>Dolores.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Qui!</Td>
-                <Td>Temporibus.</Td>
-                <Td>Sunt.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Voluptatem.</Td>
-                <Td>Eum.</Td>
-                <Td>Voluptas.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Ut?</Td>
-                <Td>Reprehenderit!</Td>
-                <Td>Iure.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Vel?</Td>
-                <Td>Facere.</Td>
-                <Td>Illo.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Voluptatem?</Td>
-                <Td>Nihil.</Td>
-                <Td>Rerum!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Consectetur?</Td>
-                <Td>Eaque?</Td>
-                <Td>Dolorum?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Expedita?</Td>
-                <Td>Illum.</Td>
-                <Td>Modi.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Quas.</Td>
-                <Td>Veritatis?</Td>
-                <Td>Iusto.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Nulla!</Td>
-                <Td>Inventore.</Td>
-                <Td>Earum.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Doloribus!</Td>
-                <Td>Ratione?</Td>
-                <Td>Tempore.</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Animi.</Td>
-                <Td>Soluta?</Td>
-                <Td>Quasi!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Possimus.</Td>
-                <Td>Architecto.</Td>
-                <Td>Porro!</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Blanditiis.</Td>
-                <Td>Quis?</Td>
-                <Td>Magnam?</Td>
-              </Tr>
-              <Tr>
-                <Td>Lorem.</Td>
-                <Td>Repudiandae!</Td>
-                <Td>Architecto.</Td>
-                <Td>Sapiente.</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </Box>
-      </SimpleGrid>
+      <Center bg={"blue"} h={"200px"}>
+        <Square bg={"white"} w={"100px"} h={"100px"}>
+          Square
+        </Square>
+      </Center>
+      <Center bg={"red.200"} h={"200px"}>
+        <Circle bg={"white"} w={"100px"} h={"100px"}>
+          <AddIcon />
+        </Circle>
+      </Center>
     </>
   );
 }
