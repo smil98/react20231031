@@ -9,6 +9,5 @@ root.render(
     <ChakraProvider>
       <App />
     </ChakraProvider>
-    {/*<h1>Hello World!</h1>*/}
   </React.StrictMode>,
 );
