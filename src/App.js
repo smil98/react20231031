@@ -1,23 +1,41 @@
-import { Box, Button } from "@chakra-ui/react";
-import { useState } from "react";
+import React, { useState } from "react";
+import { Box, Text, Input } from "@chakra-ui/react";
 
-function App() {
-  const [number, setNumber] = useState(0);
+function App(props) {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
 
-  function handleButtonClick() {
-    setNumber(number + 1);
+  function handlerUserNameChange(e) {
+    setUsername(e.target.value);
   }
 
-  function handleButtonClick2() {
-    setNumber(number - 1);
+  function handlerEmailChange(e) {
+    setEmail(e.target.value);
   }
 
   return (
-    <>
-      <h1>{number}</h1>
-      <Button onClick={handleButtonClick}>Increase</Button>
-      <Button onClick={handleButtonClick2}>Decrease</Button>
-    </>
+    <div>
+      <Box>
+        <Input type="text" value={username} onChange={handlerUserNameChange} />
+      </Box>
+      <Box>
+        <Input type="text" value={email} onChange={handlerEmailChange} />
+      </Box>
+      <Text>
+        {username}'s email : {email}
+      </Text>
+      <Box>
+        <Input
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+        />
+      </Box>
+      <Text>
+        {username}'s address : {address}
+      </Text>
+    </div>
   );
 }
 
