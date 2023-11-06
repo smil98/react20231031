@@ -1,21 +1,25 @@
 import React, { useState } from "react";
-import { Button } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 
 function App(props) {
-  const [text, setText] = useState("hello");
+  const [number, setNumber] = useState(0);
 
-  function handleButtonClick() {
-    // changing state of text
-    // text = "message"; cannot be done as react determines state
-    setText("greetings");
-    //when button is clicked, react re- renders and delivers setText to the useState
-    //once the state has been changed, react doesn't re-render as the handleButtonClick sets the text to greetings again
-  }
+  console.log(number);
+
+  const index = number % 3;
 
   return (
     <div>
-      <Button onClick={handleButtonClick}>Change Status</Button>
-      <p>{text}</p>
+      <Button onClick={() => setNumber(number + 1)}>NEXT</Button>
+      <Box borderWidth={"3px"} borderColor={index == 0 ? "blue" : "black"}>
+        <Text>message1</Text>
+      </Box>
+      <Box borderWidth={"3px"} borderColor={index == 1 ? "blue" : "black"}>
+        <Text>message2</Text>
+      </Box>
+      <Box borderWidth={"3px"} borderColor={index == 2 ? "blue" : "black"}>
+        <Text>message3</Text>
+      </Box>
     </div>
   );
 }
