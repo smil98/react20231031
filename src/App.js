@@ -1,39 +1,49 @@
-import React, { useState } from "react";
-import { Input, Text } from "@chakra-ui/react";
+import React from "react";
 import { useImmer } from "use-immer";
+import { Box, Button, ListItem, UnorderedList } from "@chakra-ui/react";
 
+let nextId = 1;
 function App(props) {
-  const [person, updatePerson] = useImmer({
-    name: "son",
-    address: { city: "seoul", country: "korea" },
-  });
+  const [items, updateItems] = useImmer([]);
 
-  function handleNameChange(e) {
-    updatePerson((draft) => {
-      draft.name = e.target.value;
+  function handleButtonClick(todo) {
+    updateItems((draft) => {
+      draft.push({ id: nextId++, done: false, text: todo });
     });
   }
 
-  function handleCityChange(e) {
-    updatePerson((draft) => {
-      draft.address.city = e.target.value;
-    });
-  }
-
-  function handleCountryChange(e) {
-    updatePerson((draft) => {
-      draft.address.country = e.target.value;
+  function handleDoneButton(id) {
+    updateItems((draft) => {
+      const item = draft.find((item) => item.id == id);
+      if (item) {
+        item.done = true;
+      }
     });
   }
 
   return (
     <div>
-      <Input value={person.name} onChange={handleNameChange} />
-      <Input value={person.address.city} onChange={handleCityChange} />
-      <Input value={person.address.country} onChange={handleCountryChange} />
-      <Text>
-        {person.name} lives in {person.address.country}, {person.address.city}.
-      </Text>
+      <Button onClick={() => handleButtonClick("Study Java")}>
+        Study Java
+      </Button>
+      <Button onClick={() => handleButtonClick("Eat Dinner")}>
+        Eat Dinner
+      </Button>
+      <Button onClick={() => handleButtonClick("Sleep")}>Sleep</Button>
+
+      <Box>
+        <UnorderedList>
+          {items.map((item) => (
+            <ListItem
+              key={item.id}
+              textDecoration={item.done ? "line-through" : "none"}
+            >
+              {item.text}
+              <Button onClick={() => handleDoneButton(item.id)}>Done</Button>
+            </ListItem>
+          ))}
+        </UnorderedList>
+      </Box>
     </div>
   );
 }
