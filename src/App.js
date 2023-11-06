@@ -1,23 +1,23 @@
-import React from "react";
-import { List, ListItem } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Button, Input, List, ListItem } from "@chakra-ui/react";
 
 function App(props) {
-  const arr = ["pizza", "hamburger", "milk", "tea"];
-  const arr2 = ["son", "lee", "kim"];
-  const listItems = arr.map((item, i) => <ListItem key={i}>{item}</ListItem>);
+  const [coffees, setCoffees] = useState(["latte"]);
+  const [text, setText] = useState("");
 
-  // const arr4 = [
-  //   { id: 0, name: "latte" },
-  //   { id: 1, name: "honey" },
-  //   { id: 2, name: "bread" },
-  // ]; would be the ideal way to set index
+  function handleButtonClick() {
+    const newCoffees = [...coffees]; //copy array
+    newCoffees.push(text);
+    setCoffees(newCoffees);
+  }
 
   return (
     <div>
-      <List>{listItems}</List>
+      <Input value={text} onChange={(e) => setText(e.target.value)} />
+      <Button onClick={handleButtonClick}>Add</Button>
       <List>
-        {arr2.map((name, index) => (
-          <ListItem key={index}>{name}</ListItem>
+        {coffees.map((c, index) => (
+          <ListItem key={index}>{c}</ListItem>
         ))}
       </List>
     </div>
