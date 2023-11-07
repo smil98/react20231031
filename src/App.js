@@ -14,10 +14,8 @@ function App(props) {
 
   function handleDoneButton(id) {
     updateItems((draft) => {
-      const item = draft.find((item) => item.id == id);
-      if (item) {
-        item.done = true;
-      }
+      const item = draft.find((e) => e.id == id);
+      item.done = !item.done;
     });
   }
 
