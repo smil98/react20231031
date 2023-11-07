@@ -1,20 +1,6 @@
-import React, { createContext, useContext, useState } from "react";
-import { Input, Text } from "@chakra-ui/react";
-
-function MyInput() {
-  const { setText } = useContext(MessageContext);
-  return (
-    <Input
-      placeholder="Enter Message"
-      onChange={(e) => setText(e.target.value)}
-    />
-  );
-}
-
-function MyText() {
-  const { text } = useContext(MessageContext);
-  return <Text>{text}</Text>;
-}
+import React, { createContext, useState } from "react";
+import { MyText } from "./component/MyText";
+import { MyInput } from "./component/MyInput";
 
 function App(props) {
   const [text, setText] = useState("Where Message is Shown");
@@ -28,6 +14,6 @@ function App(props) {
   );
 }
 
-const MessageContext = createContext(null);
+export const MessageContext = createContext(null);
 
 export default App;
