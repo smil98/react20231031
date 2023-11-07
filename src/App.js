@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
-import { AComp } from "./AComp";
-import { BComp } from "./BComp";
+import { AComp } from "./component/AComp";
+import { BComp } from "./component/BComp";
 
 function App(props) {
   const [message, setMessage] = useState("Initial Message");
