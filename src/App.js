@@ -1,47 +1,35 @@
-import React from "react";
-import { useImmer } from "use-immer";
-import { Box, Button, ListItem, UnorderedList } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { Box, Button, Text } from "@chakra-ui/react";
 
-let nextId = 1;
+function MyComp2({ message }) {
+  return (
+    <Box>
+      <Text>{message}</Text>
+    </Box>
+  );
+}
+
+function MyComp1({ onClick }) {
+  return (
+    <Box>
+      <Button onClick={onClick}>Change Text</Button>
+    </Box>
+  );
+}
+
 function App(props) {
-  const [items, updateItems] = useImmer([]);
+  const [message, setMessage] = useState("Original Text");
 
-  function handleButtonClick(todo) {
-    updateItems((draft) => {
-      draft.push({ id: nextId++, done: false, text: todo });
-    });
-  }
-
-  function handleDoneButton(id) {
-    updateItems((draft) => {
-      const item = draft.find((e) => e.id == id);
-      item.done = !item.done;
-    });
+  function handleButtonClick() {
+    setMessage("Changed Text");
   }
 
   return (
     <div>
-      <Button onClick={() => handleButtonClick("Study Java")}>
-        Study Java
-      </Button>
-      <Button onClick={() => handleButtonClick("Eat Dinner")}>
-        Eat Dinner
-      </Button>
-      <Button onClick={() => handleButtonClick("Sleep")}>Sleep</Button>
-
-      <Box>
-        <UnorderedList>
-          {items.map((item) => (
-            <ListItem
-              key={item.id}
-              textDecoration={item.done ? "line-through" : "none"}
-            >
-              {item.text}
-              <Button onClick={() => handleDoneButton(item.id)}>Done</Button>
-            </ListItem>
-          ))}
-        </UnorderedList>
-      </Box>
+      <MyComp1 onClick={handleButtonClick} />
+      {/* if button in MyComp1 is clicked */}
+      <MyComp2 message={message} />
+      {/*  change the text in MyCom2*/}
     </div>
   );
 }
