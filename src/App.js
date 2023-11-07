@@ -1,31 +1,41 @@
-import React, { useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { Button, Text } from "@chakra-ui/react";
 
-function ChildComp({ onClick }) {
-  return <Button onClick={onClick}>Click</Button>;
+function CComp() {
+  const message = useContext(MessageContext);
+  return <Text>Received Message: {message}</Text>;
 }
 
-function SomeComp({ onClick }) {
-  return <ChildComp onClick={onClick} />;
+function BComp() {
+  return <CComp />;
 }
 
-function OtherChildComp({ message }) {
-  return <Text>{message}</Text>;
-}
-
-function OtherComp({ message }) {
-  return <OtherChildComp message={message} />;
+function AComp() {
+  return <BComp />;
 }
 
 function App(props) {
   const [message, setMessage] = useState("Original Message");
 
+  // to deliver message state to C comp
+  // create context outside the app (global)
+  // put state in context : <Context.Provider value={state}></Context.Provider>
+  // allows to share the context without drilling to every lower component
+  // use within tree
+  // useContext(Context)
   return (
     <div>
-      <SomeComp onClick={() => setMessage("other Message")} />
-      <OtherComp message={message} />
+      <Button onClick={() => setMessage("Changed Message")}>
+        Change Message
+      </Button>
+      <MessageContext.Provider value={message}>
+        <AComp />
+      </MessageContext.Provider>
     </div>
   );
 }
+
+// syntax: UpperCamel Case, ends with Context
+const MessageContext = createContext(null);
 
 export default App;
