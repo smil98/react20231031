@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Box, Input, Text } from "@chakra-ui/react";
 
-function MyInput({ address, handleInputChange }) {
+function MyInput({ address, onChange }) {
   return (
     <Box>
-      <Input value={address} onChange={handleInputChange} />
+      <Input value={address} onChange={(e) => onChange(e.target.value)} />
     </Box>
   );
 }
+
 function MyText({ address }) {
   return (
     <Box>
@@ -17,14 +18,11 @@ function MyText({ address }) {
 }
 
 function App(props) {
-  const [address, setAddress] = useState("Type the Address");
-  function handleInputChange(e) {
-    setAddress(e.target.value);
-  }
+  const [address, setAddress] = useState("");
 
   return (
     <div>
-      <MyInput address={address} handleInputChange={handleInputChange} />
+      <MyInput address={address} onChange={(text) => setAddress(text)} />
       <MyText address={address} />
     </div>
   );
