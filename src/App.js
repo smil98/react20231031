@@ -1,21 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Button, Text } from "@chakra-ui/react";
+import axios from "axios";
 
 function App(props) {
-  const [number, setNumber] = useState(0);
-  //when working with external component, or bring data via ajax
-  //two parameter : 1st -> function to run, 2nd -> value that executes first parameter
-  //if empty array, renders only once initially
-  console.log("log outside useEffect", number);
   useEffect(() => {
-    console.log("effect's first parameter executed", number);
+    axios
+      .get("/api/main1/sub1")
+      .then((response) => response.data)
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
   }, []);
-  return (
-    <div>
-      <Button onClick={() => setNumber(number + 1)}>Increment</Button>
-      <Text>{number}</Text>
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;
