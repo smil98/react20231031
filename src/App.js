@@ -1,35 +1,29 @@
 import React, { useState } from "react";
-import { Box, Button, Text } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 
-function MyComp2({ message }) {
-  return (
-    <Box>
-      <Text>{message}</Text>
-    </Box>
-  );
+function ChildComp({ onClick }) {
+  return <Button onClick={onClick}>Click</Button>;
 }
 
-function MyComp1({ onClick }) {
-  return (
-    <Box>
-      <Button onClick={onClick}>Change Text</Button>
-    </Box>
-  );
+function SomeComp({ onClick }) {
+  return <ChildComp onClick={onClick} />;
+}
+
+function OtherChildComp({ message }) {
+  return <Text>{message}</Text>;
+}
+
+function OtherComp({ message }) {
+  return <OtherChildComp message={message} />;
 }
 
 function App(props) {
-  const [message, setMessage] = useState("Original Text");
-
-  function handleButtonClick() {
-    setMessage("Changed Text");
-  }
+  const [message, setMessage] = useState("Original Message");
 
   return (
     <div>
-      <MyComp1 onClick={handleButtonClick} />
-      {/* if button in MyComp1 is clicked */}
-      <MyComp2 message={message} />
-      {/*  change the text in MyCom2*/}
+      <SomeComp onClick={() => setMessage("other Message")} />
+      <OtherComp message={message} />
     </div>
   );
 }
