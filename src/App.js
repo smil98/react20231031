@@ -2,16 +2,33 @@ import React from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Link,
   Outlet,
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
 function HomeComponent() {
   return (
     <Box>
-      Common Element <Outlet />
+      <Flex gap={"10px"}>
+        <Box>
+          {/* When using react-router, don't use a tag as it refreshes the entire page*/}
+          <a href="/apath">Go to A</a>
+        </Box>
+        <Box>
+          <a href="/bpath">Go to B</a>
+        </Box>
+        {/*Use Link (react-dom) instead*/}
+        <Box>
+          <Link to={"/apath"}>Go To A</Link>
+        </Box>
+        <Box>
+          <Link to={"/bpath"}>Go To B</Link>
+        </Box>
+      </Flex>
+      <Outlet />
     </Box>
   );
 }
