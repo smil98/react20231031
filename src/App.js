@@ -1,22 +1,39 @@
 import React, { useEffect, useState } from "react";
-import { Button, Input, Text } from "@chakra-ui/react";
+import { Box, Select, Text } from "@chakra-ui/react";
+import axios from "axios";
 
 function App(props) {
-  const [number, setNumber] = useState(0);
-  const [text, setText] = useState("");
+  const [customerId, setCustomerId] = useState(0);
+  const [customer, setCustomer] = useState({});
 
-  //first parameter: function that has side effect
-  //second parameter : array that executes setup
-  //if the array is empty only runs once
   useEffect(() => {
-    console.log("effect function is running");
-  }, [number, text]);
-
+    axios
+      .get("/api/main1/sub4?id=" + customerId)
+      .then((response) => response.data)
+      .then((data) => setCustomer(data))
+      .catch((error) => console.log(error))
+      .finally(() => console.log("finished"));
+  }, [customerId]);
   return (
     <div>
-      <Button onClick={() => setNumber(number + 1)}>Add</Button>
-      <Text>{number}</Text>
-      <Input value={text} onChange={(e) => setText(e.target.value)} />
+      <Select
+        placeholder="Select Customer ID"
+        onChange={(e) => setCustomerId(e.target.value)}
+      >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </Select>
+      <Box>
+        <Text>Customer Name : {customer.customerName}</Text>
+      </Box>
     </div>
   );
 }
