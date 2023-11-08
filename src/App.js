@@ -1,86 +1,48 @@
 import React, { useEffect, useState } from "react";
-import {
-  Box,
-  Heading,
-  Select,
-  Table,
-  TableCaption,
-  TableContainer,
-  Tbody,
-  Td,
-  Text,
-  Th,
-  Thead,
-  Tr,
-} from "@chakra-ui/react";
-import axios from "axios";
+import { Box, Button, Checkbox, Text } from "@chakra-ui/react";
+
+function MyComp({ color }) {
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    console.log(color + ": initial render");
+  }, []);
+  return (
+    <Box borderWidth={"10px"} borderColor={color}>
+      <Button onClick={() => setNumber(number + 1)}>Increment</Button>
+      <Text>{number}</Text>
+    </Box>
+  );
+}
 
 function App(props) {
-  const [customerId, setCustomerId] = useState(0);
-  const [customer, setCustomer] = useState({});
-  const [customerNum, setCustomerNum] = useState([]);
+  const [number, setNumber] = useState(0);
+  const [secondToggle, setSecondToggle] = useState(true);
+  const [goldToggle, setGoldToggle] = useState(true);
 
-  useEffect(() => {
-    axios
-      .get("/api/main1/ex")
-      .then((response) => response.data)
-      .then((data) => setCustomerNum(data))
-      .catch((error) => console.log(error))
-      .finally(() => console.log("fetched total records sucessfully"));
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get("/api/main1/sub4?id=" + customerId)
-      .then((response) => response.data)
-      .then((data) => setCustomer(data))
-      .catch((error) => console.log(error))
-      .finally(() => console.log("finished"));
-  }, [customerId]);
+  console.log("re-render parent");
 
   return (
     <div>
-      <Select
-        placeholder="Select Customer ID"
-        onChange={(e) => setCustomerId(e.target.value)}
-      >
-        {customerNum.map((n) => (
-          <option key={n} value={n}>
-            {n}
-          </option>
-        ))}
-      </Select>
       <Box>
-        <Heading textAlign={"center"} mt="10%">
-          Customer Info
-        </Heading>
-        <TableContainer size="sm" maxWidth="70%" m="5% 15%">
-          <Table variant="simple">
-            <TableCaption>Customer {customerId}'s info</TableCaption>
-            <Thead>
-              <Tr>
-                <Th>ID</Th>
-                <Th>Name</Th>
-                <Th>Contact Name</Th>
-                <Th>Address</Th>
-                <Th>City</Th>
-                <Th>Postal Code</Th>
-                <Th>Country</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>{customer.customerId}</Td>
-                <Td>{customer.customerName}</Td>
-                <Td>{customer.contactName}</Td>
-                <Td>{customer.address}</Td>
-                <Td>{customer.city}</Td>
-                <Td>{customer.postalCode}</Td>
-                <Td>{customer.country}</Td>
-              </Tr>
-            </Tbody>
-          </Table>
-        </TableContainer>
+        <Text>Parent</Text>
+        <Button onClick={() => setNumber(number + 1)}>Add</Button>
+        <Text>{number}</Text>
+        <Checkbox
+          defaultChecked={true}
+          onChange={(e) => setSecondToggle(e.target.checked)}
+        />
+        Blue Box toggle
+        <Checkbox defaultChecked={true}
+                  onChange={(e) => setGoldToggle(e.target.checked)};
+      </Box>
+      <Box mt={5}>
+        <Text>Child</Text>
+        <MyComp color={"red"} />
+        {secondToggle && <MyComp color={"blue"} />}
+        <Box sx={{ display: goldToggle ? "block" : "none" }}>
+          <MyComp color={"gold"} />
+        </Box>
       </Box>
     </div>
   );
