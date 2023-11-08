@@ -7,6 +7,7 @@ import {
   Route,
   RouterProvider,
   useNavigate,
+  useParams,
   useSearchParams,
 } from "react-router-dom";
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
@@ -20,6 +21,9 @@ function Home() {
         <Button onClick={() => navigate("/path1?id=1")}>Customer 1</Button>
         <Button onClick={() => navigate("/path1?id=2")}>Customer 2</Button>
         <Button onClick={() => navigate("/path1?id=3")}>Customer 3</Button>
+
+        <Button onClick={() => navigate("/path2/seoul")}>Seoul</Button>
+        <Button onClick={() => navigate("/path2/busan")}>Busan</Button>
       </Box>
       <Box>
         <Outlet />
@@ -52,11 +56,25 @@ function AComp() {
   );
 }
 
+function BComp() {
+  // hook that gets dynamic param
+  const params = useParams();
+  console.log(params);
+  return (
+    <Box>
+      B Component
+      {params.address}
+    </Box>
+  );
+}
+
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Home />}>
         <Route path="path1" element={<AComp />} />
+        {/* dynamic param: similar to path variable of spring web mvc*/}
+        <Route path="path2/:address" element={<BComp />} />
       </Route>
     </>,
   ),
