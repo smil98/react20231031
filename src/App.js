@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -6,47 +6,57 @@ import {
   Outlet,
   Route,
   RouterProvider,
+  useNavigate,
+  useSearchParams,
 } from "react-router-dom";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import axios from "axios";
 
-function HomeComponent() {
+function Home() {
+  const navigate = useNavigate();
   return (
     <Box>
-      <Flex gap={"10px"}>
-        <Box>
-          {/* When using react-router, don't use a tag as it refreshes the entire page*/}
-          <a href="/apath">Go to A</a>
-        </Box>
-        <Box>
-          <a href="/bpath">Go to B</a>
-        </Box>
-        {/*Use Link (react-dom) instead*/}
-        <Box>
-          <Link to={"/apath"}>Go To A</Link>
-        </Box>
-        <Box>
-          <Link to={"/bpath"}>Go To B</Link>
-        </Box>
-      </Flex>
-      <Outlet />
+      <Box>
+        <Button onClick={() => navigate("/path1?id=1")}>Customer 1</Button>
+        <Button onClick={() => navigate("/path1?id=2")}>Customer 2</Button>
+        <Button onClick={() => navigate("/path1?id=3")}>Customer 3</Button>
+      </Box>
+      <Box>
+        <Outlet />
+      </Box>
     </Box>
   );
 }
 
 function AComp() {
-  return <Box>A Component</Box>;
-}
+  const [customer, setCustomer] = useState(null);
+  const [searchParams] = useSearchParams();
+  // since searchParams is similar to map must identify key
+  // console.log(searchParams);
+  // console.log(searchParams.get("id")); //n
+  // console.log(searchParams.toString()); //id=n
 
-function BComp() {
-  return <Box>B Component</Box>;
+  useEffect(() => {
+    axios
+      .get("/api/main1/sub4?" + searchParams.toString())
+      .then((response) => setCustomer(response.data));
+  }, [searchParams]);
+  return (
+    <Box>
+      {customer && (
+        <Text>
+          {searchParams.get("id")} Customer : {customer.customerName}
+        </Text>
+      )}
+    </Box>
+  );
 }
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<HomeComponent />}>
-        <Route path="apath" element={<AComp />} />
-        <Route path="bpath" element={<BComp />} />
+      <Route path="/" element={<Home />}>
+        <Route path="path1" element={<AComp />} />
       </Route>
     </>,
   ),
